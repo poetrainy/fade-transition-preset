@@ -1,6 +1,6 @@
 export type FadeTransition = {
   /**
-   * Direction of fade transition.
+   * Direction of the fade transition.
    *
    * - x: horizontal
    * - y: vertical

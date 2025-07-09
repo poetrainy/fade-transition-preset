@@ -23,7 +23,7 @@ The fade transition is triggered when the page is rendered (i.e., on component m
 
 | Name      | Type                                    | Default   | Description                                                                    |
 | --------- | --------------------------------------- | --------- | ------------------------------------------------------------------------------ |
-| direction | `"x" \| "y" \| "X" \| "Y" \| undefined` | `"Y"`     | Direction of fade transition.<br>- x: horizontal<br>- y: vertical              |
+| direction | `"x" \| "y" \| "X" \| "Y" \| undefined` | `"Y"`     | Direction of the fade transition.<br>- x: horizontal<br>- y: vertical          |
 | offset    | `string \| undefined`                   | `"200px"` | Offset distance from the starting point of the fade transition. (e.g., "24px") |
 | duration  | `number \| undefined`                   | `500`     | Duration of the fade transition.<br>Unit: ms                                   |
 
