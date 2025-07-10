@@ -1,6 +1,4 @@
-"use client";
-
-import { type FC, type ReactNode, useRef } from "react";
+import { type FC, type ReactNode, useEffect, useRef } from "react";
 import { useInView, type UseInViewOptions } from "motion/react";
 import { Box } from "@chakra-ui/react";
 import { transformStyle } from "@/libraries/fadeTransition";
@@ -9,10 +7,12 @@ import type { FadeTransition } from "@/types/fadeTransition";
 type Props = UseInViewOptions &
   FadeTransition & {
     children: ReactNode;
+    onInView?: (isInView: boolean) => void;
   };
 
-const ScrollFadeTransitionContainer: FC<Props> = ({
+const ScrollFadeInContainer: FC<Props> = ({
   children,
+  onInView,
   direction = "Y",
   offset = "200px",
   duration = 500,
@@ -20,6 +20,8 @@ const ScrollFadeTransitionContainer: FC<Props> = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, useInViewOptions);
+
+  useEffect(() => onInView?.(isInView), [isInView]);
 
   return (
     <Box
@@ -42,4 +44,4 @@ const ScrollFadeTransitionContainer: FC<Props> = ({
   );
 };
 
-export default ScrollFadeTransitionContainer;
+export default ScrollFadeInContainer;
