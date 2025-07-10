@@ -9,7 +9,7 @@ type Props = FadeTransition & {
   children: ReactNode;
 };
 
-const PageFadeTransitionContainer: FC<Props> = ({
+const PageFadeInContainer: FC<Props> = ({
   children,
   direction = "Y",
   offset = "200px",
@@ -43,4 +43,4 @@ const PageFadeTransitionContainer: FC<Props> = ({
   );
 };
 
-export default PageFadeTransitionContainer;
+export default PageFadeInContainer;
