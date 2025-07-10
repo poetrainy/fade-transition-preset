@@ -1,5 +1,3 @@
-"use client";
-
 import { type FC, type ReactNode, useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import { transformStyle } from "@/libraries/fadeTransition";
